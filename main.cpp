@@ -13,15 +13,15 @@ using namespace std;
 using namespace std::chrono;
 
 
-void printMatrix(vector<vector<int>> matrix, int matrixDimensions) {
+// void printMatrix(vector<vector<int>> matrix, int matrixDimensions) {
 
-        for (int i = 0; i < matrixDimensions; i++) {
-            for (int j = 0; j < matrixDimensions; j++) {
-                cout << matrix[i][j] << "\t";
-            }
-            cout << endl;
-        }
-}
+//         for (int i = 0; i < matrixDimensions; i++) {
+//             for (int j = 0; j < matrixDimensions; j++) {
+//                 cout << matrix[i][j] << "\t";
+//             }
+//             cout << endl;
+//         }
+// }
 
 void simpleAlgorithm(int matrixDimensions) {
 
@@ -160,9 +160,6 @@ void results() {
             auto duration = duration_cast<milliseconds>(stop - start);
 
             cout << matrixDimensions[i] << "\t| " << threadsCount[j] << "\t |" << duration.count() << " ms" << endl;
-
-            // cout << "Time parallelization algorithm use " << threadsCount[j] << " threads, for matrix of size " << matrixDimensions[i] << "x" << matrixDimensions[i] 
-            //     << " is: " << duration.count() << " ms" << endl;
         }
 
         cout << "- - - - - - - - - - - - " << endl;
